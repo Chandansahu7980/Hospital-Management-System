@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+.footer {
+    background-color: rgb(12, 44, 79);
+    color: white;
+    padding: 1em;
+}
+
+.footer ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5em 1em;
+}
+
+.footer ul li a:hover {
+    color: blue;
+    transition-duration: 0.8s;
+    text-decoration: overline;
+    background-color: white;
+}
+
+.address {
+    text-align: center;
+    margin-top: 1em;
+
+}

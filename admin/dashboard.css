@@ -1,0 +1,167 @@
+.doc-card-container {
+    background-color: lightsteelblue;
+    padding: 1em 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.doc-card-container i {
+    font-size: 1.5em;
+    color: rgb(0, 0, 160);
+    cursor: pointer;
+}
+
+.doc-card-container span i {
+    font-size: 1em;
+
+}
+
+.doc-card {
+    width: 60%;
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    background-color: rgb(198, 222, 255);
+    padding: 0.5em 2em;
+    border-radius: 0.5em;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.566);
+}
+
+.doc-card img {
+    width: 3.5em;
+    height: 3.5em;
+    border-radius: 50%;
+    border: 1px solid rgb(35, 35, 130);
+    box-shadow: 0 0 5px 1px rgb(137, 43, 226);
+
+}
+
+.doc-card .doc-name {
+    font-weight: bold;
+    font-size: larger;
+}
+
+.doc-card-container span {
+    background-color: rgba(141, 54, 222, 0.685);
+    padding: 0.3em 0.5em;
+    border-radius: 0.3em;
+    box-shadow: 0 0 5px 1px white;
+    color: white;
+    cursor: pointer;
+}
+
+canvas {
+    max-height: 70vh;
+}
+
+.dashboard-container>div:not(:nth-child(1)) {
+    /* background-color: aquamarine; */
+    padding: 0.5em;
+    margin: 1em 0.5em;
+    max-height: 75vh min-content;
+    border-radius: 0.5em;
+    box-shadow: 3px 3px 5px 0px rgb(255, 255, 255),
+        -3px -3px 6px 0px rgb(255, 255, 255),
+        6px 6px 4px black;
+}
+
+.dashboard-1 {
+    margin-top: 0.5em;
+    background-color: rgba(0, 0, 0, 0.078);
+    border-radius: 0.5em;
+    padding: 1em;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1em;
+    box-shadow: 3px 3px 5px 0px rgb(255, 255, 255),
+        -3px -3px 6px 0px rgb(255, 255, 255),
+        6px 6px 4px black;
+}
+
+.dashboard-1>.card>p:nth-child(2) {
+    margin: 0.4em auto;
+}
+
+.dashboard-11 {
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard-11 .right-cards {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 1em;
+}
+
+.dashboard-11>p {
+    text-align: center;
+    font-weight: bolder;
+    font-size: 1.2em;
+    padding-bottom: 0.3em;
+    margin-bottom: 0.5em;
+    border-bottom: 2px solid rgb(202, 251, 255);
+    letter-spacing: 1px;
+}
+
+.card {
+    background-color: rgba(240, 248, 255, 0.443);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 1em;
+    /* box-shadow: 3px 3px 8px 0px rgba(0, 0, 0, 0.4); */
+    box-shadow: 2px 2px 5px 0px rgb(255, 255, 255),
+        -2px -2px 5px 0px rgb(255, 255, 255),
+        4px 4px 2px black;
+}
+
+.card p {
+    text-align: center;
+}
+
+.card p:first-child {
+    padding: 0.5em 0;
+    background-color: rgb(134, 164, 255);
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+
+}
+
+.card p:nth-child(2) {
+    /* background-color: rebeccapurple;. */
+    font-size: 3em;
+    font-family: fantasy;
+}
+
+.dashboard-11 .card p span {
+    font-size: 0.5em;
+}
+
+.dashboard-2 {
+    margin: 1em;
+    padding: 1em;
+}
+
+.dashboard-3 {
+    width: 40%;
+}
+
+select {
+    padding: 0.25em 1em 0.25em 0.3em;
+    margin: 0.25em;
+    border-radius: 0.5em;
+}
+
+#setExpire {
+    background-color: aquamarine;
+    cursor: pointer;
+    padding: 0.3em 0.5em;
+    float: right;
+
+}
+
+#setExpire:hover ::before {
+    content: 'Expired Appointments';
+    position: relative;
+}

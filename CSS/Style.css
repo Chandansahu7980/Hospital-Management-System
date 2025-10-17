@@ -1,0 +1,430 @@
+* {
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.heading {
+    color: white;
+    padding: 1em 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: cornflowerblue;
+}
+
+
+.nav-list ul li {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.nav-list ul li:hover {
+    color: blue;
+    background-color: white;
+    border-radius: 10px;
+    transition-duration: .5s;
+}
+
+.heading .appoinment-btn button {
+    background-color: white;
+    color: blue;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.heading .appoinment-btn button:hover {
+    background-color: rgb(50, 50, 255);
+    color: white;
+    transition-duration: .8s;
+    border-radius: 20px;
+}
+
+.slider .img-wraper {
+    height: 50vh;
+    background-image: url('./../Images/sliderImg1.jpg');
+    background-size: cover;
+    overflow: hidden;
+}
+
+.img-wraper .imgOverflowDesign {
+    position: relative;
+    height: 390%;
+    width: 85%;
+    background-color: rgba(127, 255, 212, 0.521);
+    rotate: -40deg;
+    top: -100%;
+    left: -30%;
+}
+
+.slider-btn {
+    position: absolute;
+    right: 1.5em;
+    top: 34%;
+    z-index: 4;
+}
+
+.slider-btn button {
+    background: none;
+    border: none;
+    font-size: 2em;
+    color: white;
+    text-shadow: 0 0 5px black;
+    cursor: pointer;
+    padding: 0;
+}
+
+.slider h1 {
+    font-size: 3em;
+    letter-spacing: 0.1em;
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+    left: 1.5em;
+    color: white;
+    text-shadow: 5px 5px 5px black;
+    z-index: 4;
+}
+
+.allLogins {
+    padding: 1em;
+    width: 75%;
+    margin: 2em auto;
+}
+
+.allLogins h1 {
+    text-align: center;
+    color: rgb(0, 164, 164);
+    margin-bottom: 1em;
+}
+
+.allLogins .logincards {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logincards .card {
+    width: 30%;
+    height: 11em;
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    box-shadow: 0 3px 5px black;
+    border: 1px solid gray;
+    border-radius: 1em;
+    background-size: cover;
+}
+
+.logincards .card:hover {
+    scale: 1.05;
+    transition-duration: 0.5s;
+}
+
+.logincards .card1 {
+    background-image: url('./../Images/patient.jpeg');
+}
+
+.logincards .card2 {
+    background-image: url('./../Images/doctor.jpeg');
+}
+
+.logincards .card3 {
+    background-image: url('./../Images/admin.jpeg');
+}
+
+.logincards .card button {
+    background-color: white;
+    box-shadow: 0 2px 5px gray;
+    padding: 0.8em 3em;
+    border: 0;
+    border-radius: 1em;
+    cursor: pointer;
+    font-weight: bold;
+    position: relative;
+    top: 1.2em;
+}
+
+.logincards .card button:hover {
+    background-color: rgb(46, 114, 240);
+    color: white;
+    transition-duration: .5s;
+    border-radius: 15px;
+}
+
+.feature-container {
+    width: 70%;
+    margin: 2em auto 1em auto;
+    padding: 1.3em;
+}
+
+.feature-container .headLine {
+    text-align: center;
+    color: rgb(95, 95, 95);
+    letter-spacing: 1px;
+}
+
+.feature-container .headLine h1 {
+    color: rgb(0, 164, 164);
+}
+
+.feature-container .features-cards {
+    padding: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.feature-container .features-cards .features {
+    padding: 10px 0;
+    margin: 0.6em;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.feature-container .features-cards .features:hover {
+    background-color: aquamarine;
+    border-radius: 1em;
+    transition: 1s;
+}
+
+.feature-container .features-cards .features:hover i {
+    transform: rotate(360deg) rotateX(360deg);
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 2s;
+    color: blue;
+}
+
+.feature-container .features-cards .features i {
+    color: rgb(0, 164, 164);
+    margin: 0.7em;
+    font-size: 2em;
+}
+
+.feature-container .features-cards .features:hover p {
+    font-weight: bold;
+}
+
+.feature-container .features-cards .features p {
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.about-hs {
+    margin: auto;
+    height: 40vh;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin-bottom: 2em;
+}
+
+.about-hs img {
+    width: 40%;
+}
+
+.about-hs p {
+    max-height: 40vh;
+    overflow-y: scroll;
+}
+
+.about-hs ::-webkit-scrollbar {
+    display: none;
+}
+
+.gallery-wraper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gallery-wraper h1 {
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    color: rgb(16, 27, 151);
+}
+
+.gallery-wraper .gallery-btn-types {
+    text-align: center;
+}
+
+.gallery-wraper .gallery-btn-types button {
+    padding: 0.5em 1em;
+    background-color: white;
+    border: 1px solid rgb(46, 55, 129);
+    box-shadow: 5px 5px 5px rgb(23, 55, 137);
+    margin: 5px 6px 20px;
+    border-radius: 7px;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+.gallery-btn-types button:hover {
+    color: white;
+    background-color: rgb(33, 39, 100);
+    box-shadow: -3px -3px 5px rgb(23, 31, 137);
+    transition-duration: .5s;
+    border-color: lightgray;
+    border-right: none;
+    border-bottom: none;
+}
+
+.imgs-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: auto;
+    gap: 1em;
+    margin-bottom: 2em;
+}
+
+.imgs-container img {
+    height: 9em;
+    width: 28%;
+    border: 1px lightgray solid;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px gray;
+}
+
+.imgs-container img:hover {
+    box-shadow: -5px -5px 10px gray;
+    transition-duration: .6s;
+    border-radius: 30px;
+}
+
+.feedback-form {
+    padding: 1em;
+    width: 70%;
+    margin: 1em auto;
+    background-color: rgba(127, 255, 212, 0.313);
+    border-radius: 1em;
+}
+
+.feedback-form form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.feedback-form input {
+    margin: 0.25em;
+    padding: 0.2em;
+}
+
+.feedback-form textarea {
+    padding: 0.5em;
+}
+
+.feedback-form textarea {
+    padding: 0.5em;
+    width: 100%;
+    height: 10em;
+}
+
+.feedback-form button {
+    border: 0;
+    border-radius: 0.3em;
+    cursor: pointer;
+    background-color: rgb(101, 241, 194);
+    font-weight: bold;
+    width: 35%;
+    padding: 0.5em 2em;
+    margin: 0.5em auto;
+    text-align: center;
+    letter-spacing: 0.1em;
+}
+
+.feedback-form button:hover {
+    color: white;
+    background-color: rgb(108, 220, 183);
+}
+
+
+@media only screen and (max-width:1024px) {
+    .heading .nav-list {
+        display: none;
+    }
+
+    .allLogins {
+        width: 90%;
+    }
+
+    .feature-container {
+        width: 90%;
+    }
+
+    .feature-container .features-cards .features {
+        width: 40%;
+    }
+
+    .feedback-form {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width:426px) {
+    .heading {
+        padding: 1em;
+    }
+
+    .slider .img-wraper {
+        height: 40vh;
+    }
+
+    .img-wraper .imgOverflowDesign {
+        display: none;
+    }
+
+    .slider-btn {
+        top: 30%;
+    }
+
+    .slider h1 {
+        font-size: 2em;
+        left: 1em;
+    }
+
+    .allLogins .logincards {
+        flex-direction: column;
+        align-items: center;
+        gap: 2em;
+    }
+
+    .logincards .card {
+        width: 80%;
+    }
+
+    .about-hs {
+        height: fit-content;
+        flex-direction: column;
+    }
+
+    .about-hs img {
+        width: 80%;
+    }
+
+    .about-hs p {
+        max-height: 100%;
+    }
+
+    .imgs-container {
+        width: 90%;
+    }
+
+    .imgs-container img {
+        height: 10em;
+        width: 80%;
+    }
+
+    .feedback-form button {
+        width: 100%;
+    }
+}

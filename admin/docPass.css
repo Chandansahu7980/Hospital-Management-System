@@ -1,0 +1,145 @@
+body {
+    height: 100vh;
+    margin: 0;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+h2 {
+    margin-top: 0.5em;
+    text-align: center;
+}
+
+.page {
+    height: 90vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.page .item1 {
+    border-right: 2px gray solid;
+    overflow-y: scroll;
+}
+
+.container {
+    padding: 1em;
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+}
+
+.doc-card {
+    background-color: rgba(154, 188, 255, 0.767);
+    padding: 1em;
+    width: 45%;
+    border-radius: 0.5em;
+    box-shadow: 1px 1px 10px 1px gray;
+}
+
+.doc-contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    margin-bottom: 0.5em;
+}
+
+.doc-card .doc-contact img {
+    border-radius: 50%;
+    border: 5px solid rgb(20, 19, 96);
+    width: 5em;
+    height: 5em;
+}
+
+i {
+    cursor: pointer;
+}
+
+.actions i {
+
+    margin-left: 1em;
+    transition-duration: 0.4s;
+}
+
+.actions i:hover {
+    scale: 1.2;
+}
+
+.item2 {
+    padding: 1em;
+}
+
+.item2 .doc-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.item2 .doc-details img {
+    width: 30%;
+    border: 3px solid lightskyblue;
+    box-shadow: 0 0 10px 1px gray;
+}
+
+.item2 .doc-details p {
+    text-align: center;
+}
+
+.item2 form table {
+    margin: auto;
+    /* text-align: center; */
+}
+
+.item2 form table th {
+    text-align: right;
+}
+
+button {
+    background-color: green;
+    cursor: pointer;
+    border: 0;
+    padding: 0.2em 1em;
+    color: white;
+    font-weight: bold;
+
+}
+
+form button {
+    margin-top: 1em;
+    letter-spacing: 1px;
+    padding: 0.5em 2em;
+}
+
+form button:hover {
+    transition-duration: 1s;
+    border-radius: 0.5em;
+    box-shadow: 0 0 10px 2px greenyellow;
+}
+
+.cancel {
+    position: absolute;
+    top: 0.5em;
+    left: 1em;
+    padding: 0.3em;
+    border: 1px red solid;
+    cursor: pointer;
+    transition-duration: 0.5s;
+    border-radius: 0.2em;
+}
+
+.cancel i {
+    transition-duration: 0.5s;
+    color: red;
+}
+
+.cancel:hover {
+    background-color: red;
+    color: white;
+}
+
+.cancel:hover i {
+    color: white;
+}

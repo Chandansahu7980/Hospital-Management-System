@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+.middle-container {
+    width: max-content;
+    background-color: rgb(167, 152, 253);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 4px gray;
+    margin: 50px auto;
+}
+
+.middle-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.middle-container form h1 {
+    margin-bottom: 1em;
+}
+
+.middle-container form input[type="text"],
+.middle-container form input[type="number"],
+.middle-container form input[type="email"],
+.middle-container form input[type="password"],
+.gender-cls {
+    background-color: white;
+    padding: 0.5em;
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+}
+
+.gender-cls {
+    color: gray;
+}
+
+.gender-cls select {
+    color: gray;
+    width: 68%;
+    outline: 0;
+    border: 0;
+}
+
+.middle-container form input[type="text"]:focus,
+.middle-container form input[type="number"]:focus,
+.middle-container form input[type="email"]:focus,
+.middle-container form input[type="password"]:focus {
+    box-shadow: 5px 5px 5px black;
+    transition-duration: .5s;
+}
+
+.middle-container form button {
+    width: 50%;
+    margin: auto;
+    background-color: rgb(23, 19, 64);
+    color: white;
+    outline: 0;
+    border: 0;
+    padding: 1em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+.login-form form button:hover,
+.signup-form form button:hover {
+    text-shadow: 0px 0px 8px white;
+    box-shadow: 0px 0px 5px 3px white;
+}
+
+.middle-container p span {
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.middle-container p span:hover {
+    text-decoration: underline;
+    color: aqua;
+}
+
+#signUp-form {
+    display: none;
+}
