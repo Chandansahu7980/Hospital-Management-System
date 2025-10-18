@@ -26,7 +26,6 @@ session_start();
             flex-direction: row-reverse;
             justify-content: end;
         }
-        
     </style>
 </head>
 
@@ -378,13 +377,15 @@ session_start();
             });
 
             $("#manage-pt").keyup(function() {
-                $.ajax({
-                    method: 'POST',
-                    url: 'loadPatProfile.php',
-                    data: "searchItem=" + $("#manage-pt").val()
-                }).done(function(data) {
-                    $("#apnt-htry div").html(data);
-                });
+                if ($("#manage-pt").val().length > 2) {
+                    $.ajax({
+                        method: 'POST',
+                        url: 'loadPatProfile.php',
+                        data: "searchItem=" + $("#manage-pt").val()
+                    }).done(function(data) {
+                        $("#apnt-htry div").html(data);
+                    });
+                }
             });
 
             $("#query-btn").click(function() {
