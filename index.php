@@ -185,7 +185,7 @@
     <script>
         if (!navigator.onLine) {
             console.log("Internet Issue");
-            window.location.replace('internetError.html');
+            window.location.replace('./Common/internetError.html');
         }
     </script>
 </body>

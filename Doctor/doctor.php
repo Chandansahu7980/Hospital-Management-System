@@ -274,9 +274,10 @@ session_start();
                     </form>
                     <?php
                     if (isset($_POST['dt-logout'])) {
+                        session_unset();
                         session_destroy();
                         echo "<script>alert('Logout Successfull.')</script>";
-                        echo "<script>window.location.href='./index.php'</script>";
+                        echo "<script>window.location.href='./../index.php'</script>";
                     }
                     ?>
                 </div>
