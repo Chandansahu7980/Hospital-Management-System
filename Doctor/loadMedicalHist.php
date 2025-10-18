@@ -1,7 +1,7 @@
 <?php
 $searchWord = $_POST['searchItem'];
 
-include './config.php';
+include './../DB/config.php';
 $sql = "SELECT mh.*, pt.name, pt.phone FROM `medi_hist` mh JOIN `patient` pt ON mh.pat_id = pt.id WHERE pt.name LIKE '%$searchWord%' OR pt.phone LIKE '$searchWord%' ORDER BY mh.date_updated;";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {

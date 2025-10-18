@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add New Patient - HMS Doctor</title>
-    <link rel="shortcut icon" href="./Images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./../Images/favicon.ico" type="image/x-icon">
     <style>
         input,
         select,
@@ -98,7 +98,7 @@
     <?php
     session_name("doctor_session");
     session_start();
-    include './config.php';
+    include './../DB/config.php';
     if ($_SESSION['dId']) {
         if (isset($_POST['CREATE'])) {
             // password = first 4 letter from name, dob year, gender in 'f/m'

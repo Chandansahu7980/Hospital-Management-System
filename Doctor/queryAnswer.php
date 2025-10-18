@@ -3,7 +3,7 @@ session_name("doctor_session");
 session_start();
 // echo "helllo";
 // echo $_GET['d'];
-include './config.php';
+include './../DB/config.php';
 $quries = $conn->query("SELECT queries.id, queries.query_text, queries.posted_time, patient.name, patient.phone,patient.email, queries.intended_dept_id FROM queries JOIN patient ON queries.pat_id=patient.id WHERE (queries.intended_dept_id=" . $_GET['d'] . " OR queries.intended_dept_id='') AND queries.status='pending' ORDER BY patient.email;")->fetch_all();
 ?>
 
@@ -14,7 +14,7 @@ $quries = $conn->query("SELECT queries.id, queries.query_text, queries.posted_ti
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Answer Patient Query - HMS</title>
-    <link rel="shortcut icon" href="./Images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./../Images/favicon.ico" type="image/x-icon">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
