@@ -356,7 +356,7 @@
                 var spec_Id = $("#spec").val();
                 $.ajax({
                     method: 'POST',
-                    url: 'loadDoctorList.php',
+                    url: './../Common/loadDoctorList.php',
                     data: 'spec_Id=' + spec_Id
                 }).done(function(docts) {
                     console.log(docts);

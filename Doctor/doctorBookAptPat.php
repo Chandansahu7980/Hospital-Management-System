@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Appoinment - Patient:Doctor</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <link rel="shortcut icon" href="./Images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./../Images/favicon.ico" type="image/x-icon">
     <style>
         body {
             margin: 0;
@@ -67,7 +67,7 @@
     session_start();
     if ($_SESSION['dId']) {
         // echo "doctor logged in";
-        include './config.php';
+        include './../DB/config.php';
 
         $PatIdResult = $conn->query("SELECT `id`, `name`, `dob` FROM `patient` ");
         $specIdResult = $conn->query("SELECT `id`, `name` FROM `spec_list` ");
@@ -137,7 +137,7 @@
             $("#spec_Id").change(function() {
                 $.ajax({
                     method: 'POST',
-                    url: 'loadDoctorList.php',
+                    url: './../Common/loadDoctorList.php',
                     data: "spec_Id=" + $("#spec_Id").val()
                 }).done(function(data) {
                     $("#docId").html(data);
