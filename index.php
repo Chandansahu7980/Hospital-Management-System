@@ -19,11 +19,11 @@
         </div>
         <div class="nav-list">
             <ul>
-                <li>Home</li>
-                <li>Service</li>
-                <li>Gallery</li>
-                <li>About us</li>
-                <li>Contact us</li>
+                <li onclick="window.location.href='#'">Home</li>
+                <li onclick="window.location.href='#feature-container'">Service</li>
+                <li onclick="window.location.href='#gallery-wraper'">Gallery</li>
+                <li onclick="window.location.href='#about-hs'">About us</li>
+                <li onclick="window.location.href='#feedback-form'">Contact us</li>
             </ul>
         </div>
         <div class="appoinment-btn">
@@ -58,7 +58,7 @@
         </div>
     </div>
 
-    <div class="feature-container">
+    <div class="feature-container" id="feature-container">
         <div class="headLine">
             <h1>Key Features</h1>
             <p>Take a look at some of our key features</p>
@@ -91,7 +91,7 @@
         </div>
     </div>
 
-    <div class="about-hs">
+    <div class="about-hs" id="about-hs">
         <img src="./Images/aboutHS.jpg" alt="">
         <p>Our commitment is to provide world-class medical services to our community, ensuring the well-being and health of every individual we serve. <br> We believe in delivering patient-centered care that goes beyond the ordinary. Our state-of-the-art facilities are equipped with cutting-edge technology and staffed by a dedicated team of healthcare professionals who are passionate about making a positive impact on the lives of our patients. <br>
             <b>Mission Statement:</b> <br>
@@ -99,7 +99,7 @@
         </p>
     </div>
 
-    <div class="gallery-wraper">
+    <div class="gallery-wraper" id="gallery-wraper">
         <h1>Our Gallery</h1>
         <div class="gallery-btn-types">
             <button id="all-btn">All</button>
@@ -150,7 +150,7 @@
         </div>
     </div>
 
-    <div class="feedback-form">
+    <div class="feedback-form" id="feedback-form">
         <h2><u>Contact Form :</u></h2>
         <form action="" method="post">
             <div class="">
