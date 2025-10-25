@@ -77,7 +77,7 @@
 <?php
 session_name('admin');
 session_start();
-include './../config.php';
+include './../DB/config.php';
 $tableName = $_GET['tb'];
 ?>
 <span onclick="window.location.href='admin.php'" class="cancel"><a href=""><i class="fa-solid fa-left-long"></i></a>&nbsp; Cancel</span>
