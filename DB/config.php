@@ -10,5 +10,5 @@ if($conn->connect_error){
     echo "database connection failed";
     die("Connection failed ".$conn->error);
 }else{
-    echo "connection to database successful";
+    // echo "connection to database successful";
 }
