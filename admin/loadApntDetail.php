@@ -1,5 +1,5 @@
 <?php
-include './../config.php';
+include './../DB/config.php';
 // echo $_POST['seachTerm'] . $_POST['dept'] . $_POST['formDate'] . $_POST['toDate'] . $_POST['sts'] . $_POST['apntType'];
 
 $sqlQuery = "SELECT * FROM `apnts` WHERE (doct_id IN (SELECT `id` FROM `doctor` WHERE name LIKE '%" . $_POST['seachTerm'] . "%') OR patient_id IN (SELECT `id` FROM `patient` WHERE name LIKE '%" . $_POST['seachTerm'] . "%'))";
@@ -8,13 +8,13 @@ if ($_POST['dept']) {
     $sqlQuery = $sqlQuery . " AND spec_id=" . $_POST['dept'];
 }
 if ($_POST['formDate'] and $_POST['toDate']) {
-    $sqlQuery = $sqlQuery . "AND (date BETWEEN '" . $_POST['formDate'] . "' AND '" . $_POST['toDate'] . "')";
+    $sqlQuery = $sqlQuery . " AND (date BETWEEN '" . $_POST['formDate'] . "' AND '" . $_POST['toDate'] . "')";
 }
 if ($_POST['sts']) {
-    $sqlQuery = $sqlQuery . "AND status='" . $_POST['sts'] . "'";
+    $sqlQuery = $sqlQuery . " AND status='" . $_POST['sts'] . "'";
 }
 if ($_POST['apntType']) {
-    $sqlQuery = $sqlQuery . "AND apnt_type='" . $_POST['apntType'] . "'";
+    $sqlQuery = $sqlQuery . " AND apnt_type='" . $_POST['apntType'] . "'";
 }
 ?>
 <table>
@@ -32,6 +32,10 @@ if ($_POST['apntType']) {
     <?php
     $slNo = 0;
     $apnts = $conn->query($sqlQuery);
+    // echo $sqlQuery;
+    if ($apnts->num_rows == 0) {
+        echo "<tr><td colspan='9' style='text-align:center'>No Appointments Found</td></tr>";
+    }
     while ($apnt = $apnts->fetch_assoc()) {
         $patName = $conn->query("SELECT `name` FROM `patient` WHERE id='" . $apnt['patient_id'] . "'")->fetch_assoc()['name'];
         $deptName = $conn->query("SELECT `name` FROM `spec_list` WHERE id='" . $apnt['spec_id'] . "'")->fetch_assoc()['name'];

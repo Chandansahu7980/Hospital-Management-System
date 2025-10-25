@@ -1,5 +1,5 @@
 <?php
-include './../config.php';
+include './../DB/config.php';
 
 $sqlQuery = "SELECT * FROM `patient` WHERE (name LIKE '%" . $_POST['searchItem'] . "%' OR email LIKE '%" . $_POST['searchItem'] . "%' OR phone LIKE '%" . $_POST['searchItem'] . "%') AND disease LIKE '%" . $_POST['disease'] . "%'";
 if ($_POST['gender']) {

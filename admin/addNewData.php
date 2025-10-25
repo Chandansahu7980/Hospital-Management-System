@@ -341,7 +341,7 @@ if ($_SESSION['aId']) {
         $("#spec_Id").change(function() {
             $.ajax({
                 method: 'POST',
-                url: './../loadDoctorList.php',
+                url: './../Common/loadDoctorList.php',
                 data: "spec_Id=" + $("#spec_Id").val()
             }).done(function(data) {
                 $("#docId").html(data);

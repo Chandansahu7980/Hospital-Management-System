@@ -1,5 +1,5 @@
 <?php
-include './../config.php';
+include './../DB/config.php';
 echo $_POST['searchTerm'] . $_POST['dept'] . $_POST['date'];
 $sqlQuery = "SELECT * FROM `medi_hist` WHERE apnt_id IN (SELECT `id` FROM `apnts` WHERE doct_id IN (SELECT `id` FROM `doctor` WHERE name LIKE '%" . $_POST['searchTerm'] . "%') OR patient_id in (SELECT `id` FROM `patient` WHERE name LIKE '%" . $_POST['searchTerm'] . "%'))";
 if ($_POST['dept']) {

@@ -2,7 +2,7 @@
 error_reporting(0);
 session_name('admin');
 session_start();
-include './../config.php';
+include './../DB/config.php';
 $result = $conn->query("SELECT * FROM `doctor` WHERE adminPass='fail' ORDER BY creation_date DESC;");
 
 ?>

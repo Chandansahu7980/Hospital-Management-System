@@ -1,7 +1,7 @@
 <?php
 session_name('admin');
 session_start();
-include './../config.php';
+include './../DB/config.php';
 $tableName = $_GET['t'];
 $id = $_GET['id'];
 ?>

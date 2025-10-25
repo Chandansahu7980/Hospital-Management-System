@@ -1,5 +1,5 @@
 <?php
-include './../config.php';
+include './../DB/config.php';
 // echo strtolower($_POST['search-term'])  . $_POST['dept'] . $_POST['adminPass'];
 $sqlQuery = "SELECT * FROM `doctor` WHERE (name LIKE '%" . $_POST['search-term'] . "%' OR phone LIKE '%" . $_POST['search-term'] . "%' OR LOWER(email) LIKE '%" . $_POST['search-term'] . "%' OR license_info LIKE '%" . $_POST['search-term'] . "%')";
 if ($_POST['dept']) {
