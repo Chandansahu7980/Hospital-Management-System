@@ -89,13 +89,13 @@ include './../DB/config.php';
         } else {
             switch ($table) {
                 case 'patient':
-                    echo "You Don't have any account. Please Sign Up <a href='patientLogin.php'>here</a>";
+                    echo "You Don't have any account. Please Sign Up <a href='./../Patient/patientLogin.php'>here</a>";
                     break;
                 case 'doctor':
-                    echo "You Don't have any account. Please Sign Up <a href='doctorLogin.php'>here</a>";
+                    echo "You Don't have any account. Please Sign Up <a href='./../Doctor/doctorLogin.php'>here</a>";
                     break;
                 default:
-                    echo "You Don't have any account. <a href='index.php'>Click here</a>";
+                    echo "You Don't have any account. <a href='./../index.php'>Click here</a>";
                     break;
             }
         }
@@ -115,5 +115,4 @@ include './../DB/config.php';
         }
     }
     ?>
-
 </body>
